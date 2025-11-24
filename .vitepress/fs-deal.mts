@@ -56,7 +56,8 @@ export function getDirLink(path) {
     const dirs = readDirSync(path);
     let res = {}
     for(let dir of dirs){
-        if(dir.endsWith('node_modules')) {
+        const dirname = dir.slice(dir.lastIndexOf('/')+1)
+        if(['.git','.github','.idea','node_modules'].includes(dirname)){
             continue
         }
         const items = readAllFilesSync(dir).map(i => {
