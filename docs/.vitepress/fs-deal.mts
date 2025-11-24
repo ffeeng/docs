@@ -60,7 +60,7 @@ export function getDirLink(path) {
         const items = readAllFilesSync(dir).map(i => {
             const index = i.lastIndexOf('/')
             return {
-                text: i.slice(index + 1), link: "../../../"+i
+                text: i.slice(index), link: i
             }
         })
 
