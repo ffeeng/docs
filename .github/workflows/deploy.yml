@@ -50,13 +50,13 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: docs/.vitepress/dist
+          path: .vitepress/dist
 
   # 部署工作
   deploy:
     environment:
       name: github-pages
-      url: docs/.vitepress/dist
+      url: .vitepress/dist
     needs: build
     runs-on: ubuntu-latest
     name: Deploy
