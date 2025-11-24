@@ -78,7 +78,7 @@ export default defineConfig({
         sidebar: getDirLink(__dirname+"/.."),
 
         editLink: {
-            pattern: 'https://github.com/ffeeng/my-docs/edit/main/docs/:path',
+            pattern: 'https://github.com/ffeeng/docs/edit/main/docs/:path',
             text: '在 GitHub 上编辑此页面'
         },
 
