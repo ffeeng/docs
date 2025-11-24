@@ -27,7 +27,7 @@ function readAllFilesSync(dir, fileList = []) {
         if (stat.isDirectory()) {
             readAllFilesSync(filePath, fileList);
         } else {
-            const fileName = filePath.split('my-docs/docs')[1];
+            const fileName = filePath.split('docs/docs')[1];
             if(fileName.endsWith('.md')) {
                 fileList.push(fileName);
             }
