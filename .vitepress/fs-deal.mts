@@ -29,7 +29,7 @@ function readAllFilesSync(dir, fileList = []) {
         } else {
             const fileName = filePath.split('docs')[1];
             if(fileName.endsWith('.md')) {
-                fileList.push(".."+fileName);
+                fileList.push(fileName.replace('.md',''));
             }
         }
     });
