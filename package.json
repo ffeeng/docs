@@ -4,9 +4,9 @@
     "vitepress": "^2.0.0-alpha.13"
   },
   "scripts": {
-    "docs:dev": "vitepress dev docs --port 3000",
-    "docs:build": "vitepress build docs",
-    "docs:preview": "vitepress preview docs"
+    "docs:dev": "vitepress dev  --port 3000",
+    "docs:build": "vitepress build ",
+    "docs:preview": "vitepress preview "
   },
   "dependencies": {
     "@types/node": "^24.10.1"
