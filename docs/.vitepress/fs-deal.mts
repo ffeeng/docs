@@ -30,7 +30,7 @@ function readAllFilesSync(dir, fileList = []) {
             const fileName = filePath.split('docs/docs')[1];
 
             if(fileName.endsWith('.md')) {
-                fileList.push(fileName.replace('.md','').slice(1));
+                fileList.push(fileName.replace('.md',''));
             }
         }
     });
@@ -58,7 +58,7 @@ export function getDirLink(path) {
     let res = {}
     for(let dir of dirs){
         const items = readAllFilesSync(dir).map(i => {
-            const index = i.lastIndexOf('/')
+            const index = i.lastIndexOf('/')+1
             return {
                 text: i.slice(index), link: i
             }
