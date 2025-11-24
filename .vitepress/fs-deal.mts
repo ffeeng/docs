@@ -29,7 +29,7 @@ function readAllFilesSync(dir, fileList = []) {
         } else {
             const fileName = filePath.split('docs')[1];
             if(fileName.endsWith('.md')) {
-                fileList.push(fileName);
+                fileList.push(".."+fileName);
             }
         }
     });
@@ -56,6 +56,9 @@ export function getDirLink(path) {
     const dirs = readDirSync(path);
     let res = {}
     for(let dir of dirs){
+        if(dir.endsWith('node_modules')) {
+            continue
+        }
         const items = readAllFilesSync(dir).map(i => {
             const index = i.lastIndexOf('/')
             return {
@@ -65,7 +68,7 @@ export function getDirLink(path) {
 
         let index = dir.lastIndexOf('/')
         let name = '/'+dir.slice(index + 1)+'/'
-        res[name]=items
+        res[name]= items
     }
     return res;
 }
