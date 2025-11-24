@@ -75,7 +75,13 @@ export default defineConfig({
             {text: '业务', link: '/business'},
             {text: '工具', link: '/tools/curl.html'},
         ],
-        sidebar: getDirLink(__dirname+"/.."),
+        sidebar:  {
+            '/frontend/':[
+                            {
+                                text:'aaa',link:'/frontend/axios.md'
+                            }
+                        ]
+        },
 
         editLink: {
             pattern: 'https://github.com/ffeeng/docs/edit/main/docs/:path',
