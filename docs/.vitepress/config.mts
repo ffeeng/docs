@@ -9,7 +9,7 @@ import { getDirLink } from './fs-deal.mts'
 export default defineConfig({
     title: "博客",
     description: "我的站点",
-    // base:'/docs/',
+    base:'/docs/',
     themeConfig: {
         outline:{
             label:"本页目录"

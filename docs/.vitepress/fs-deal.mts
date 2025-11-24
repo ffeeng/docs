@@ -30,7 +30,7 @@ function readAllFilesSync(dir, fileList = []) {
             const fileName = filePath.split('docs/docs')[1];
 
             if(fileName.endsWith('.md')) {
-                fileList.push(fileName.replace('.md',''));
+                fileList.push(fileName.replace('.md','').slice(1));
             }
         }
     });
