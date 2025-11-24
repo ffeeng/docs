@@ -1,4 +1,5 @@
 import {defineConfig} from 'vitepress'
+// @ts-ignore
 import { getDirLink } from './fs-deal.mts'
 
 
@@ -8,9 +9,11 @@ import { getDirLink } from './fs-deal.mts'
 export default defineConfig({
     title: "博客",
     description: "我的站点",
-    base: '/my-docs/',
+    base: '/docs/',
     themeConfig: {
-        outline: [1,2, 3],   //
+        outline:{
+            label:"本页目录"
+        },
         docFooter: {
             prev: '上一页',
             next: '下一页'
@@ -51,6 +54,9 @@ export default defineConfig({
                 link: 'https://www.baidufe.com/fehelper/regexp/index.html'
             },
             {
+                text: '正则可视化',
+                link: 'https://www.jyshare.com/front-end/854/'
+            },{
                 text: '正则可视化',
                 link: 'https://jex.im/regulex/#!flags=&re=%5E(a%7Cb)*%3F%24'
             },

@@ -1,5 +1,5 @@
-import path from 'path'
-import fs from 'fs';
+import * as path from 'path'
+import * as fs from 'fs';
 import { fileURLToPath } from 'url';
 
 function readDirSync(dir) {
@@ -70,6 +70,7 @@ export function getDirLink(path) {
     return res;
 }
 
+// @ts-ignore
 const __filename = fileURLToPath(import.meta.url);
 
 // 3. 计算 __dirname（当前文件所在的目录路径）
