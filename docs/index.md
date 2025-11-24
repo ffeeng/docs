@@ -16,7 +16,7 @@
 - [axios](https://axios-http.com/zh/docs/intro)
 - [vite](https://cn.vitejs.dev/guide/cli.html)
 - [GitHub](https://github.com/)
-- [掘金](https://juejin.im) 
+- [掘金](https://juejin.im)
 
 ## react
 - [react](https://zh-hans.react.dev/reference/react/useEffect)
@@ -47,7 +47,7 @@
 ### 后端文档
 [nginx](http://nginx.org/en/docs/)  
 [mysql](https://dev.mysql.com/doc/refman/8.0/en/examples.html)
-[面试](https://github.com/yygmind/blog?tab=readme-ov-file)  
+[面试](https://github.com/yygmind/blog?tab=readme-ov-file)
 
 
 ## 进阶标准规范

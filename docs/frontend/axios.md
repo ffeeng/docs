@@ -12,7 +12,7 @@ Promise based HTTP client for the browser and node.js
 - 支持防XSRF攻击
 - 取消请求
 
-![axios原型](./img/axios.png)
+![axios原型](img/axios.png)
 
 ## 洋葱模型
 
@@ -39,7 +39,7 @@ response.end();
 - axios.defaults保存axios的全局配置
 - axios.get、post等方法会使用axios的全局配置
 - axios.create创建axios实例会使用全部配置
-  ![axios配置](./img/axios_config.png)
+  ![axios配置](img/axios_config.png)
 - axios.default是为了在ts中兼容默认导入
 ```js
 // Allow use of default import syntax in TypeScript

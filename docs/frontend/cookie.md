@@ -105,7 +105,7 @@ declare var sessionStorage: Storage;
 declare var localStorage: Storage;
 ```
 
-![数据存储](./img/数据存储.png)
+![数据存储](img/数据存储.png)
 | 特性            | cookie| localStorage  | sessionStorage  |indexDB|
 | :-------------- | :--------------- | :------------ | :------------ |:------------ |
 | 数据生命周期   | 一般由服务器生成，可以设置过期时间  |除非被清理，否则一直存在 |domain/path匹配不到tab页时清除 |除非被清理，否则一直存在|

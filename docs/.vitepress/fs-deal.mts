@@ -27,7 +27,8 @@ function readAllFilesSync(dir, fileList = []) {
         if (stat.isDirectory()) {
             readAllFilesSync(filePath, fileList);
         } else {
-            const fileName = filePath.split('docs')[1];
+            const fileName = filePath.split('docs/docs')[1];
+
             if(fileName.endsWith('.md')) {
                 fileList.push(fileName.replace('.md',''));
             }
@@ -56,10 +57,6 @@ export function getDirLink(path) {
     const dirs = readDirSync(path);
     let res = {}
     for(let dir of dirs){
-        const dirname = dir.slice(dir.lastIndexOf('/')+1)
-        if(['.git','.github','.idea','node_modules'].includes(dirname)){
-            continue
-        }
         const items = readAllFilesSync(dir).map(i => {
             const index = i.lastIndexOf('/')
             return {
