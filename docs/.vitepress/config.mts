@@ -89,6 +89,7 @@ export default defineConfig({
             '/business/': [
                 { text: 'ai', link: '/business/ai' },
                 { text: 'editor', link: '/business/editor' },
+                { text: 'tiptap', link: '/business/tiptap' },
                 { text: 'index', link: '/business/index' },
                 { text: 'lint', link: '/business/lint' },
                 { text: 'microfronend', link: '/business/microfronend' },
