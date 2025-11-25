@@ -117,6 +117,7 @@ export default defineConfig({
                 { text: '版本管理', link: '/devops/版本管理' },
                 { text: '端口管理', link: '/devops/端口管理' },
                 { text: '自动化部署', link: '/devops/自动化部署' },
+                { text: '自动化部署', link: '/devops/自动化部署2' },
                 { text: '进程原理', link: '/devops/进程原理' }
             ],
             '/faq/': [ { text: 'index', link: '/faq/index' } ],
