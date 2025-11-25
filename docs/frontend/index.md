@@ -127,3 +127,57 @@ export function sse() {
     return { content, isLoading, start, restart, contentMap, stop, id: resId, dataArr };
 }
 ```
+
+## 复制到剪切板
+
+```javascript
+export function copyClipboard(text) {
+  const { message } = createDiscreteApi(['message']);
+  try {
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(text).then(() => {
+        message.success('复制成功');
+      }).catch(() => {
+        message.error('复制失败');
+      });
+    }
+    else {
+      const textArea = document.createElement('textarea');
+      document.body.appendChild(textArea);
+
+      textArea.value = text; // 假设 shareText.value 是你要复制的字符串
+      // 关键修正：将文本框内容全部选中
+      textArea.select();
+      // 对于移动端设备，可能还需要设置 selectionStart 和 selectionEnd
+
+      textArea.setSelectionRange(0, 99999); // 兼容 iOS
+      // 为了不影响页面布局和用户体验，可以将 textarea 隐藏起来
+      textArea.style.position = 'fixed';
+      textArea.style.top = '0';
+      textArea.style.left = '0';
+
+      textArea.style.opacity = '0'; // 或者 display: 'none' / visibility: 'hidden'
+
+      try {
+        const successful = document.execCommand('copy');
+        if (successful) {
+          message.success('复制成功');
+        }
+        else {
+          message.error('复制失败');
+        }
+      }
+      catch (err) {
+        message.error('复制失败');
+      }
+      finally {
+        // 复制完成后，移除临时的 textarea 元素
+        document.body.removeChild(textArea);
+      }
+    }
+  }
+  catch (error) {
+    message.error('复制失败');
+  }
+}
+```
