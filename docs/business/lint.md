@@ -10,7 +10,7 @@
 -  "eslint": "^9.23.0",
 
 ```javascript
-# eslint.config.js
+// eslint.config.js
 import antfu from '@antfu/eslint-config';
 
 export default antfu({
