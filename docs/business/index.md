@@ -6,12 +6,13 @@
     host: true,
     proxy: {
       '/api': {
-        target: 'https://muse.ejoy.tech:2443',
+        target: 'https://muse.xxx.tech:2443',
         changeOrigin: true,
         rewrite: path => path.replace(/^\/api/, '/app-api'),
       },
     },
   },
 ```
+
 
 
