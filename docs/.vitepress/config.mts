@@ -114,6 +114,7 @@ export default defineConfig({
                 { text: 'jenkins', link: '/devops/jenkins' },
                 { text: 'nginx', link: '/devops/nginx' },
                 { text: 'shell', link: '/devops/shell' },
+                { text: 'docker', link: '/devops/docker' },
                 { text: '包管理', link: '/devops/包管理' },
                 { text: '常用指令', link: '/devops/常用指令' },
                 { text: '版本管理', link: '/devops/版本管理' },
