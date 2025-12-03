@@ -77,7 +77,7 @@ export default defineConfig({
         ],
         sidebar:{
             '/backend/': [
-                { text: '2', link: '/backend/a/2' },
+                { text: 'go', link: '/backend/go' },
                 { text: 'http', link: '/backend/http' },
                 { text: 'index', link: '/backend/index' },
                 { text: 'mysql', link: '/backend/mysql' },
