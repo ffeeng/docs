@@ -134,6 +134,7 @@ export default defineConfig({
                 { text: 'JS核心', link: '/frontend/JS核心' },
                 { text: 'Promise常见面试题', link: '/frontend/Promise常见面试题' },
                 { text: 'axios', link: '/frontend/axios' },
+                { text: 'canvas', link: '/frontend/canvas' },
                 { text: 'console', link: '/frontend/console' },
                 { text: 'cookie', link: '/frontend/cookie' },
                 { text: 'dom', link: '/frontend/dom' },
