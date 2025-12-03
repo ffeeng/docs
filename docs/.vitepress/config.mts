@@ -46,6 +46,10 @@ export default defineConfig({
                 link: 'https://nav.poetries.top/'
             },
             {
+                text: '备忘录',
+                link: 'https://wangchujiang.com/reference/index.html'
+            },
+            {
                 text: 'cheatSheet',
                 link: 'https://devhints.io/'
             },
