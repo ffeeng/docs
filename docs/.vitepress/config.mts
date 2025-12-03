@@ -176,11 +176,11 @@ export default defineConfig({
 
         editLink: {
             pattern: 'https://github.com/ffeeng/docs/edit/main/docs/:path',
-            text: '在GitHub上编辑此页面'
+            text: '编辑此页'
         },
 
         socialLinks: [
-            {icon: 'github', link: 'https://github.com/ffeeng/myDocs'}
+            {icon: 'github', link: 'https://github.com/ffeeng/docs'}
         ]
     }
 })
