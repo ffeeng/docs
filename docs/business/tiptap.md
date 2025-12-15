@@ -1,5 +1,21 @@
 # [tiptap](https://tiptap.dev/docs)
 
+## 插入并选中html
+```javascript
+
+  const { from } = editor.state.selection
+  
+  // 插入内容
+  editor.chain().focus().insertContent(html).run()
+  
+  // 获取插入后的位置
+  const to = editor.state.selection.to
+  
+  // 选中插入的内容
+  editor.chain()
+    .setTextSelection({ from, to })
+    .run()
+```
 
 ## 常用方法
 ```javascript
