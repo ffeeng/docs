@@ -10,24 +10,18 @@ export function insertSelectMd(text, editor) {
     typographer: true, // 排版优化
   });
   const html = md.render(text);
-  let from = editor.state.selection.from;
-  if (editor.isFocused) {
-    console.log('编辑器有焦点，插入到光标位置');
-    editor.chain().focus().insertContent(html).run();
-  }
-  else {
+  if (!editor.isFocused) {
     console.log('编辑器无焦点，插入到文档末尾');
-    const endPos = editor.state.doc.content.size;
-    from = editor.state.doc.content.size;
-    editor.chain()
-      .focus()
-      .setTextSelection(endPos)
-      .insertContent(html)
-      .run();
+    editor.commands.focus('end');
   }
+  const from = editor.state.selection.from;
+  editor.chain()
+    .focus()
+    .insertContent(html)
+    .run();
   const to = editor.state.selection.to;
   editor.chain()
-    .setTextSelection({ from: from + 1, to })
+    .setTextSelection({ from, to })
     .run();
 }
 ```
