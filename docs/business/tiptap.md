@@ -3,18 +3,33 @@
 ## 插入并选中html
 ```javascript
 
-  const { from } = editor.state.selection
-  
-  // 插入内容
-  editor.chain().focus().insertContent(html).run()
-  
-  // 获取插入后的位置
-  const to = editor.state.selection.to
-  
-  // 选中插入的内容
+export function insertSelectMd(text, editor) {
+  const md = new MarkdownIt({
+    html: true, // 允许 HTML
+    linkify: true, // 自动识别链接
+    typographer: true, // 排版优化
+  });
+  const html = md.render(text);
+  let from = editor.state.selection.from;
+  if (editor.isFocused) {
+    console.log('编辑器有焦点，插入到光标位置');
+    editor.chain().focus().insertContent(html).run();
+  }
+  else {
+    console.log('编辑器无焦点，插入到文档末尾');
+    const endPos = editor.state.doc.content.size;
+    from = editor.state.doc.content.size;
+    editor.chain()
+      .focus()
+      .setTextSelection(endPos)
+      .insertContent(html)
+      .run();
+  }
+  const to = editor.state.selection.to;
   editor.chain()
-    .setTextSelection({ from, to })
-    .run()
+    .setTextSelection({ from: from + 1, to })
+    .run();
+}
 ```
 
 ## 常用方法
