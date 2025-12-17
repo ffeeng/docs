@@ -132,7 +132,7 @@ export default defineConfig({
             '/frontend/': [
                 { text: 'CSS', link: '/frontend/CSS' },
                 { text: 'JS核心', link: '/frontend/JS核心' },
-                { text: 'Promise常见面试题', link: '/frontend/Promise常见面试题' },
+                { text: '常用函数', link: '/frontend/常用函数' },
                 { text: 'axios', link: '/frontend/axios' },
                 { text: 'canvas', link: '/frontend/canvas' },
                 { text: 'console', link: '/frontend/console' },
@@ -155,6 +155,7 @@ export default defineConfig({
                 { text: '常用注入 Script 方法', link: '/frontend/常用注入 Script 方法' },
                 { text: '断点调试', link: '/frontend/断点调试' },
                 { text: '设计模式', link: '/frontend/设计模式' },
+                { text: 'Promise常见面试题', link: '/frontend/Promise常见面试题' },
                 { text: '面试', link: '/frontend/面试' }
             ],
             '/interview/': [
