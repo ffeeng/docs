@@ -97,6 +97,7 @@ export default defineConfig({
                 { text: 'sheet', link: '/business/sheet' },
                 { text: 'proseMirror', link: '/business/proseMirror' },
                 { text: 'tiptap', link: '/business/tiptap' },
+                { text: 'uniapp', link: '/business/uniapp' },
                 { text: 'index', link: '/business/index' },
                 { text: 'lint', link: '/business/lint' },
                 { text: 'microfronend', link: '/business/microfronend' },
